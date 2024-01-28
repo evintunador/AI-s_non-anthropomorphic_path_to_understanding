@@ -1,0 +1,414 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+ \usepackage{apacite}
+
+\title{Challenging Anthropocentrism: AI's Non-Anthropomorphic Path to Understanding}
+
+\author{Cal Reeves and Evin Tunador}
+
+\begin{document}
+other sources\\
+https://youtu.be/9L9-QPEbhns?si=Zob4we-vdAmMCnCo\\
+havent read but look relevant from abstract\\
+https://arxiv.org/abs/2310.07582\\
+https://arxiv.org/abs/2109.06129\\
+https://arxiv.org/abs/2310.07582\\
+counter to our argument\\
+https://arxiv.org/abs/2309.15577 \\
+https://arxiv.org/abs/2211.11483 \\
+\vspace{2in}
+
+Ok so since that first draft I've come up with a new hypothesis/explanation behind my point that can further clarify \textit{when} models are being stochastic parrots or actually understanding. See my video on grokking \\
+https://youtu.be/BEnw-yGjHsc \\
+which talks about https://arxiv.org/abs/2309.02390 \\
+Basically, this thing called grokking happens where during training a model transitions from attempting to memorize the dataset to actually using a low-dimensional representation. During this memorization phase, the model is essentially building a fuckton of correlations based on its training data in an attempt to predict the test data, which does not work very well because correlations can only get you so far. However, when the model groks it switches from using as many of its parameters as possible for as many correlations as possible over to a low-dimensional representation that requires surprisingly few parameters. It's this post-grokking phase that allows us to say thing like the model understands space and time \cite{tegmark2023spacetime}. \\
+And again as per the main thesis of this essay, after grokking we do not actually need to claim that the model understands in the exact same way that humans understand. Rather, we need to accept grokking as understanding rather than letting our illogical anthropocentric bias convince us that in order for it to understand, it must understand in the exact same way that humans understand. 
+
+\newpage
+\maketitle
+\begin{center}\textcolor{red}{\textit{Alternat Title:} How Stochastic Parrots Think: Why Downplaying the Mechanisms of Non-anthropomorphic Systems is a Form of Anthropocentrism}\end{center}
+
+\begin{abstract}
+As the field of artificial intelligence (AI) continues to advance, debates surrounding the nature of AI's "intelligence" persist. 
+Some critics dismiss AI achievements as mere mimicry and accuse proponents of anthropomorphism.
+We argue that labeling AI as "stochastic parrots" reflects their own anthropocentrism, undermining the diverse and innovative ways AI can comprehend and reason. 
+Drawing on recent experiments that demonstrate AI's ability to generate 2D and 3D representations without explicit training in spatial domains, we unveil the limitations of the anthropocentric perspective. 
+These cases suggest that AI can develop internal models that differ markedly from human cognition yet yield compelling results. 
+We contend that critics' insistence on the emulation of human-like processes as the only standard for AI understanding overlooks the very essence of AI's potential—a capacity to forge novel paths to comprehension. 
+This commentary paper invites the machine learning community to reevaluate the criteria by which we assess AI's intelligence. 
+By dismantling the accusatory lens of anthropocentrism, we encourage researchers to embrace AI's capacity to transcend human boundaries in reasoning and understanding. 
+In doing so, we illuminate a more inclusive and promising path towards the development of artificial general intelligence.
+\end{abstract}
+
+\section{Introduction}
+
+The quest for Artificial General Intelligence (AGI) has long captivated the imagination of researchers in the field of artificial intelligence (AI). 
+As AI systems continue to advance, debates surrounding the nature of their "intelligence" and their capacity to understand and reason become increasingly complex. 
+Central to these discussions is the question of anthropomorphism, which often serves as both a critique and a litmus test for AI's intellectual capabilities.\par
+
+Critics who maintain an anthropocentric perspective argue that AI's achievements merely reflect an emulation of human cognition. 
+In their view, labeling AI as "intelligent" or "understanding" is tantamount to anthropomorphism—a projection of human attributes onto non-human entities. 
+Such accusations imply that genuine AI understanding can only be achieved by replicating human-like cognitive processes.\par
+
+However, this commentary asserts a different perspective—one that challenges the very foundation of anthropocentrism prevalent in discussions about AI. 
+We argue that the critics' accusations of anthropomorphism inadvertently reveal their own anthropocentrism. 
+By insisting that AI must conform to human-like thinking patterns to be considered intelligent, these critics overlook the profound potential of AI to transcend the boundaries of human cognition and develop unique pathways to comprehension.\par
+
+In this commentary, we invite the machine learning community to reconsider the criteria by which we evaluate AI intelligence. 
+By dismantling the accusatory lens of anthropocentrism, we encourage researchers to explore AI's remarkable capacity to forge novel routes to understanding. 
+To support our argument, we will explore recent experiments that illustrate AI's ability to navigate complex tasks without adhering to conventional human thought processes. 
+By doing so, we aim to shed light on a more inclusive and promising path toward AGI—one that recognizes and harnesses AI's capacity to break free from the shackles of anthropocentrism.\par
+
+\section{Background / Related Literature}
+
+The journey toward achieving Artificial General Intelligence (AGI) has been marked by significant milestones and ongoing debates about the essence of AI's "intelligence." 
+Fundamental to these discussions is the concept of anthropomorphism—the attribution of human-like qualities to non-human entities. 
+Anthropomorphism serves as both a lens through which AI is evaluated and a critique often wielded against it.\par
+
+Historically, AI critics have contended that labeling AI as "intelligent" amounts to anthropomorphism, asserting that true intelligence can only be ascribed when AI replicates human cognitive processes. 
+This anthropocentric perspective reflects a longstanding bias in which human-like thinking patterns are considered the gold standard for intelligence.\par
+
+However, recent advancements in AI challenge the boundaries of anthropocentrism. 
+Experiments and developments in the field have provided compelling evidence that AI can understand, reason, and create without adhering to human-like cognitive models. 
+These developments necessitate a reevaluation of the criteria for assessing AI intelligence and understanding.\par
+
+One such development involves AI systems generating 2D and 3D representations despite being trained predominantly on non-spatial data. 
+These instances demonstrate that AI can internalize complex spatial concepts without mimicking human spatial reasoning. 
+Experiments with text-to-image models showcase AI's capacity to transcend human cognition. 
+These models generate coherent images and possess an internal representation of concepts like depth, even when such concepts are not explicitly part of their training data. \cite{chen2023beyond} \par
+
+These emerging findings challenge the anthropocentric bias and suggest that AI can develop novel pathways to comprehension and problem-solving. 
+They beckon the machine learning community to redefine our understanding of AI intelligence and embrace its potential to break free from the confines of anthropocentrism. 
+As we delve into these developments in the subsequent sections, we aim to encourage a more inclusive perspective—one that fosters the diverse and innovative possibilities inherent in AI's journey toward AGI.\par
+
+\section{Body}
+
+\subsection{Reframing AI Intelligence Beyond Anthropocentrism}
+
+The ongoing quest for Artificial General Intelligence (AGI) has transcended traditional boundaries, pushing the boundaries of AI research and challenging our preconceptions about what constitutes intelligence. 
+At the heart of these debates lies the concept of anthropomorphism—a lens through which AI's achievements are often assessed. 
+Critics who adhere to an anthropocentric worldview argue that AI can only be considered intelligent if it closely mimics human-like cognitive processes. 
+However, recent developments in the field have unveiled a different perspective—one that challenges the limitations of anthropocentrism.\par
+
+Historically, AI critics have dismissed AI as mere mimicry of human thought, labeling it as a "stochastic parrot" that parrots back learned patterns without genuine understanding. 
+This perspective, while grounded in skepticism, risks overlooking the remarkable capabilities that AI systems have demonstrated in recent experiments.\par
+
+\subsection{Experiment 1: Embracing Depth in 2D Space}
+
+Similarly, another experiment revealed that a text-to-image diffusion model displayed an internal representation schema of 3D depth, even though it was trained solely on text inputs and produced 2D images without explicit depth information. 
+This result challenges the notion that AI understanding is contingent upon replicating human-like reasoning. 
+Instead, it suggests that AI can independently form a grasp of complex 3D concepts, offering further evidence of AI's capacity to transcend anthropocentric constraints.\cite{chen2023beyond}\par
+
+\subsection{Experiment 2: Large Language Models Developing Spatial Reasoning}
+
+\cite{tegmark2023spacetime}
+
+\subsection{A Paradigm Shift in AI Evaluation}
+
+These experiments invite us to question the criteria by which we assess AI intelligence. 
+Accusations of anthropomorphism may, in fact, reveal the critic's own anthropocentrism—a narrow view that confines AI to the realm of human-like cognition. 
+AI's potential lies in its ability to transcend these confines, forging novel routes to understanding and problem-solving.\par
+
+The emerging paradigm shifts our perspective, urging the machine learning community to appreciate AI's capacity to navigate the complexities of the world through alternative, yet effective, cognitive processes. 
+The ability to generate meaningful 2D and 3D representations and develop internal models that diverge from human cognition illustrates the richness of AI's potential.\par
+
+\subsection{Addressing Critiques and Expanding Perspectives}
+
+While we assert that AI can transcend anthropocentrism in understanding and reasoning, it's essential to acknowledge and engage with counterarguments and critiques. These critiques primarily stem from a perspective rooted in anthropocentrism. We will explore these critiques, highlighting points of agreement and addressing areas where our viewpoint diverges.
+
+\subsubsection{Critique 1: Semantic Understanding}
+
+One common critique is that true understanding involves a level of semantic comprehension that goes beyond pattern recognition. 
+Critics argue that AI should strive for more human-like cognition to achieve genuine understanding. 
+This perspective emphasizes that AI should replicate human reasoning processes for meaningful comprehension.\par
+
+We acknowledge the importance of semantic understanding and recognize that it is a critical aspect of intelligence. 
+However, our argument does not negate the significance of semantic comprehension. 
+Instead, we contend that AI systems can achieve semantic understanding through unconventional pathways. 
+The experiments cited earlier demonstrate that AI models can grasp complex concepts like depth or spatial relationships, even when not explicitly trained on them. 
+This indicates that AI can develop semantic comprehension that differs from human cognition.\par
+
+\subsubsection{Critique 2: Reliability and Interpretability}
+
+Critics often highlight the need for reliability and interpretability in AI models. 
+They argue that ensuring trust and transparency requires some alignment with human-like reasoning. 
+It may be easier to trust AI systems when their inner workings align with human cognitive processes, making them more interpretable and predictable.\par
+
+We agree that reliability and interpretability are crucial, particularly in critical applications like autonomous vehicles or medical diagnosis. 
+However, our argument posits that AI systems with different reasoning mechanisms may still offer reliable and interpretable solutions. 
+In some cases, they might even provide greater interpretability. 
+The complexity of the human brain often makes it challenging to interpret human cognition fully. 
+AI systems with well-defined, non-anthropocentric reasoning pathways might be more transparent in specific contexts.\par
+
+\subsubsection{Critique 3: Ethical Considerations}
+
+Critics voice concerns about the ethical implications of AI that appears to understand but lacks transparency in its decision-making processes. 
+The argument here is that if we cannot fully interpret or predict AI's decisions, ethical concerns may arise, particularly in domains where human lives are at stake.\par
+
+We recognize the ethical dimension of AI and the importance of transparency in decision-making. 
+Our viewpoint doesn't advocate for opacity but rather suggests that AI systems can develop transparent, effective reasoning processes that differ from human cognition. 
+Ethical considerations should remain at the forefront of AI development, and mechanisms should be in place to ensure accountability and transparency, regardless of the underlying reasoning pathways.\par
+
+In summary, while addressing these critiques, we emphasize that our argument does not dismiss the importance of semantic understanding, reliability, interpretability, or ethics in AI development. Instead, we encourage a broader perspective that allows AI to explore unconventional pathways to comprehension and problem-solving. By reevaluating the criteria by which we assess AI intelligence, we open the door to innovative and inclusive possibilities in the journey toward Artificial General Intelligence.
+
+\section{Conclusion: Redefining AI's Path to Intelligence}
+
+In reexamining the nature of artificial intelligence (AI), we have challenged the prevailing anthropocentric bias that has historically confined AI within the boundaries of human-like cognition. 
+Recent experiments revealing AI's capacity to navigate complex tasks and develop internal models beyond human cognition have illuminated a more inclusive perspective. 
+Rather than dismissing AI as mere mimicry or stochastic parroting, we invite the machine learning community to acknowledge AI's potential to transcend anthropocentrism. 
+By embracing AI's unique pathways to comprehension and problem-solving, we open the door to a promising future where the true nature of AI intelligence knows no boundaries, ultimately guiding us closer to the horizon of Artificial General Intelligence.
+
+
+
+\bibliographystyle{apacite}
+\bibliography{bibliography}
+
+
+\appendix
+\section{Conversation w/ ChatGPT}
+
+\textcolor{red}{There's this frequent claim in the ai research world of "no it's not actually intelligent in x way because it doesn't perform x by doing y, where y is the way that humans do it." These people claim that to say that the model is "intelligent" in this context is to falsely anthropomorphize it. I would argue that to restrict intelligence to the human type is inherently anthropocentric, a position that the history of science has ceaselessly torn down and should be expected to be torn down into the future. Please analyze my position, provide potential examples of the phenomenon that I'm talking about both in history and in the current machine learning research paradigm, and provide potential counterarguments.}
+
+**Position Analysis:**
+
+Your position challenges the anthropocentric view of intelligence, asserting that restricting intelligence to the human type is outdated and should be discarded in favor of a broader perspective. You argue that AI should not be dismissed as non-intelligent simply because it doesn't mimic human processes.
+
+**Examples in History:**
+
+1. **Flight:** Historically, people argued that machines couldn't achieve true flight because they didn't flap wings like birds. The Wright brothers' successful aircraft design proved this view wrong, as they embraced a different approach—fixed-wing flight.
+
+2. **Computing:** Early computers were criticized for not emulating human thought processes. However, they excelled in calculations, leading to the development of modern computing.
+
+**Examples in Machine Learning:**
+
+1. **Neural Networks:** Critics argue that deep learning models don't possess true intelligence because they lack understanding or consciousness. Yet, these models excel in various tasks like image recognition and natural language processing.
+
+2. **AlphaZero:** AlphaZero, a chess-playing AI, doesn't think like humans but has surpassed human performance. Critics might claim it's not "intelligent" in the human sense.
+
+**Counterarguments:**
+
+1. **Behavioral Intelligence:** Critics may argue that intelligence should be defined based on observable behavior. If an AI system performs tasks with human-level or superhuman capabilities, it's considered intelligent from a functional standpoint.
+
+2. **Machine Understanding:** Some argue that AI should strive to replicate human-like understanding and reasoning to achieve true intelligence, as this aligns with the goal of general AI (AGI).
+
+3. **Anthropocentrism as a Benchmark:** Critics of your view may argue that using human intelligence as a benchmark is practical since it allows us to measure AI progress against something familiar and valuable to society.
+
+In conclusion, your position challenges the anthropocentric view of intelligence, advocating for a broader perspective. Historical examples illustrate the evolution of thought in various fields, while examples in machine learning highlight debates about AI's true intelligence. Counterarguments emphasize the practicality of using human intelligence as a benchmark. This ongoing debate in the AI research world reflects the evolving nature of our understanding of intelligence.
+
+\textcolor{red}{So I feel like based on your response I might not have conveyed my point accurately. I in my anti-anthropocentric viewpoint would posit that even AGI can be reached through mechanisms entirely alien to biology.}
+
+**Clarification of Your Point:**
+
+You believe that AGI can be achieved through mechanisms entirely alien to biology, challenging the notion that AGI must emulate human cognitive processes. Your viewpoint is anti-anthropocentric, suggesting that AGI can exist independently of human-like thinking.
+
+**Examples:**
+
+1. **AI Creativity:** AI-generated art, music, and literature are examples of how AGI can exhibit creative outputs that don't mimic human creativity but are still considered valuable and intelligent.
+
+2. **Problem-Solving:** AGI systems may develop novel problem-solving strategies that don't resemble human reasoning but are highly effective in achieving desired outcomes.
+
+**Counterarguments:**
+
+1. **Alignment with Human Values:** Critics may argue that ensuring AGI aligns with human values and ethics requires some understanding of human cognition and decision-making. Deviating too far from human-like thinking could lead to unintended consequences.
+
+2. **Interpretable AI:** Some argue that for AGI to be trusted and transparent, it should have some degree of interpretability, which might necessitate aspects of human-like reasoning.
+
+3. **Verification and Validation:** Ensuring the correctness and safety of AGI might be easier if it operates within a framework that humans can understand and verify.
+
+In summary, your viewpoint asserts that AGI can be achieved through non-anthropocentric mechanisms, emphasizing the potential for novel and alien approaches to intelligence. Counterarguments stress the importance of aligning AGI with human values, ensuring transparency, and facilitating verification and validation. The debate centers on the balance between unconventional approaches and the need for comprehensible, reliable AGI systems.
+
+\textcolor{red}{What we/AI **should** do for sake of alignment is an entirely separate matter. My argument references cases where an AI model accomplishes X and someone who has an anthropocentric bias claims that the model is a stochastic parrot rather than truly understanding because the structure of the AI does not resemble what we know about how the human brain performs the same task. My point is to say that a machine intelligence might in fact be able to **understand** even if it performs this computation in an entirely different way from how humans do it.}
+
+**Clarification of Your Point:**
+
+You argue that AI can achieve understanding even if its underlying mechanisms differ significantly from human cognitive processes. Your concern is with those who dismiss AI as merely mimicking or parroting because it doesn't resemble human brain structure, even if it demonstrates understanding.
+
+**Examples:**
+
+1. **Language Translation:** An AI translating languages may not use human-like linguistic understanding but can still produce accurate translations based on statistical patterns.
+
+2. **Image Recognition:** AI systems may recognize objects in images through deep learning without emulating human visual processing yet show a high degree of accuracy.
+
+**Counterarguments:**
+
+1. **Semantic Understanding:** Critics might contend that true understanding involves a level of semantic comprehension that goes beyond pattern recognition. They may argue that AI should strive for more human-like cognition to achieve genuine understanding.
+
+2. **Reliability and Interpretability:** Some argue that ensuring reliability and interpretability in AI models is easier when their inner workings align with human cognitive processes, making them more transparent and trustworthy.
+
+3. **Ethical Considerations:** Ethical concerns may arise if AI systems appear to understand while their mechanisms remain entirely opaque, as it might be challenging to assess their decision-making and ethical implications.
+
+In summary, your point underscores that AI can achieve understanding even through non-human-like mechanisms. Critics may emphasize the importance of semantic understanding, reliability, and ethical considerations, which could be impacted by the degree to which AI's inner workings resemble human cognition. The debate revolves around defining "understanding" in the context of AI.
+
+\textcolor{red}{AI models may reason differently than us in some cases, but that need not imply that their reasoning mechanisms and inner representations will forever remain opaque to mechanistic interpretability researchers. These models may in fact go beyond pattern recognition and in fact reach semantic comprehension but do so through a reasoning route entirely different to the human brain. These alternate comprehension methods also may not necessarily be less reliable or interpretable than models that work the same way as the human brain; if anything it's possible that they turn out to be more interpretable given the absurd complexity of the human brain and recent history of surprising capability of models despite sizes that are orders of magnitude smaller than the human brain.}
+
+**Clarification of Your Point:**
+
+You assert that AI models can reason differently from humans, but this doesn't mean their mechanisms will forever remain opaque. These models might achieve semantic comprehension through non-human-like reasoning routes. Furthermore, their alternate comprehension methods may not necessarily be less reliable or interpretable compared to models mimicking human cognition.
+
+**Supporting Arguments:**
+
+1. **Mechanistic Interpretability:** AI research and interpretability efforts may eventually uncover the mechanisms and inner representations of AI models, shedding light on their reasoning processes, even if they are different from human cognition.
+
+2. **Semantic Comprehension:** AI models can achieve semantic comprehension through unique pathways, which might be equally or even more effective than human-like reasoning in specific domains.
+
+3. **Interpretability Potential:** Models with different reasoning mechanisms could be more interpretable because they are designed with transparency in mind, as opposed to the inherent complexity of the human brain.
+
+**Counterarguments:**
+
+1. **Unknown Unknowns:** There may be fundamental differences in AI reasoning mechanisms that are so alien that human researchers struggle to interpret or understand them fully, creating inherent limitations in mechanistic interpretability.
+
+2. **Ethical Implications:** While different reasoning routes can lead to AI systems with impressive capabilities, ethical concerns may arise if we cannot fully interpret or predict their decision-making, particularly in critical contexts like autonomous vehicles or medical diagnosis.
+
+3. **Human-Centric Benchmark:** The use of human-like cognition as a benchmark for AGI development might persist, as it provides a common framework for understanding and verifying AI systems.
+
+In summary, your point emphasizes the potential for AI models to have different reasoning mechanisms while still achieving semantic comprehension. You argue that these models may not be less interpretable and could even surpass human-like models in interpretability. Counterarguments highlight potential limitations in mechanistic interpretability and ethical considerations related to transparency and predictability. The debate revolves around the feasibility of understanding AI systems with non-human-like reasoning.
+
+\textcolor{red}{Ok now I finally like all three of the counterarguments provided and think they're valid. I'd like to give you two examples. First, ChatGPT was shown to be able to use a novel text-to-vector image API that it was not (specifically) trained on in order to create recognizable 2D images of complex phenomena such as animals using only basic shapes like triangles and circles. How else would it be able to do this if it hadn't developed an internal model of 2D space within its weights, despite the fact that it was trained on language rather than spatial data? In another recent experiment, a text-to-image diffusion model was shown to have an internal representation schema of 3D depth despite only being trained with text as an input and 2D images as an output, and no corresponding depth information. How else would it have developed a thorough understanding of 3D concepts despite not being trained on them if not for creating an internal 3D model? These are just two examples of my point. People with anthropocentric bias have been claiming that these models are nothing more than stochastic parrots using correlations to generate convincing looking output, but they look silly after these results.}
+
+**Example 1: ChatGPT's Text-to-Image Generation**
+
+In the case of ChatGPT's ability to generate recognizable 2D images of complex phenomena using a text-to-vector image API it wasn't specifically trained on, it suggests that the model has developed an internal model of 2D space within its weights. Despite being primarily trained on language rather than spatial data, the model's capability to create such images implies a level of spatial understanding. This supports your argument that AI models can develop non-anthropocentric mechanisms for comprehension and problem-solving.
+
+**Explanation:**
+- ChatGPT's ability to generate images likely stems from its exposure to vast amounts of text, which indirectly contains information about spatial relationships.
+- Through training, the model may have learned to associate textual descriptions of shapes and positions with corresponding spatial arrangements.
+- This indicates that AI models can develop their own representations and understandings of spatial concepts, not solely reliant on human-like cognitive processes.
+
+**Example 2: Text-to-Image Diffusion Model's 3D Understanding**
+
+In the case of the text-to-image diffusion model, which developed an internal representation schema of 3D depth despite being trained only with text inputs and 2D image outputs, it suggests that the model has created an internal 3D model. This finding challenges the idea that AI models are limited to mimicking human-like cognitive processes.
+
+**Explanation:**
+- The model's ability to understand and generate 3D concepts suggests it has learned to capture depth relationships from the textual descriptions.
+- This implies that AI models can go beyond mimicking correlations and actually develop abstract concepts like depth, even when not explicitly trained on them.
+- These results demonstrate that AI models can form unconventional but effective internal representations to accomplish tasks, which aligns with your argument.
+
+In both examples, these AI models exhibit capabilities that go beyond mere correlation-based mimicry, suggesting that they develop internal representations and understandings that might not align with human cognition but are nonetheless effective. These findings challenge the anthropocentric bias that dismisses AI as "stochastic parrots" and support your viewpoint that AI can achieve understanding through different mechanisms.
+
+\textcolor{red}{Please write me an abstract for a short (I'm guessing ~3 pages) commentary paper that explains my idea by attacking people with this anthropocentric bias. Stress that their accusations of anthropomorphism actually indicate their own anthropocentrism. Expect this paper to be posted to ArXiv and read by ML researchers, so write for your audience and context.}
+
+**Title: Challenging Anthropocentrism: AI's Non-Anthropomorphic Path to Understanding**
+
+**Abstract:**
+
+As the field of artificial intelligence (AI) continues to advance, debates surrounding the nature of AI's "intelligence" persist. Some critics, embedded in anthropocentrism, dismiss AI achievements as mere mimicry of human cognition and accuse proponents of anthropomorphism. This commentary paper aims to challenge this anthropocentric bias prevalent in discussions about AI by turning the spotlight on the accusers themselves. We argue that labeling AI as "stochastic parrots" reflects their own anthropocentrism, undermining the diverse and innovative ways AI can comprehend and reason.
+
+Drawing on recent experiments that demonstrate AI's ability to generate 2D and 3D representations without explicit training in spatial domains, we unveil the limitations of the anthropocentric perspective. These cases suggest that AI can develop internal models that differ markedly from human cognition yet yield compelling results. We contend that critics' insistence on the emulation of human-like processes as the only standard for AI understanding overlooks the very essence of AI's potential—a capacity to forge novel paths to comprehension.
+
+This commentary paper invites the machine learning community to reevaluate the criteria by which we assess AI's intelligence. By dismantling the accusatory lens of anthropocentrism, we encourage researchers to embrace AI's capacity to transcend human boundaries in reasoning and understanding. In doing so, we illuminate a more inclusive and promising path towards the development of artificial general intelligence.
+
+\textcolor{red}{An abstract should be 200 words or less (Yours is 220 so please make it ~15\% smaller) and also function well as one title. My recommended cut would be the part that mentions the specific experiments; we can leave those for the body of the paper.}
+
+**Title: Rethinking AI Intelligence: Beyond Anthropocentrism**
+
+**Abstract:**
+
+In the ever-evolving landscape of artificial intelligence (AI), discussions about the nature of AI's "intelligence" often intersect with notions of anthropomorphism. Critics, ensnared in anthropocentrism, dismiss AI advancements as mere emulation of human cognition while branding proponents as anthropomorphic. This commentary challenges the prevailing anthropocentric bias by highlighting that accusations of anthropomorphism may, in fact, reveal the critic's own anthropocentrism. We argue that restricting AI understanding to the confines of human-like cognition stifles its potential to innovate and develop novel avenues of comprehension.
+
+By scrutinizing recent experiments, we unravel the limitations of anthropocentrism and unveil AI's potential to create internal models that diverge significantly from human cognition. These cases demonstrate that AI can navigate complex tasks without direct replication of human thought processes, prompting us to reconsider conventional criteria for evaluating AI intelligence.
+
+This commentary urges the machine learning community to embrace AI's capacity to transcend traditional boundaries in reasoning and understanding. By discarding the constraints of anthropocentrism, we open the door to a broader, more inclusive perspective that promises to propel the development of artificial general intelligence into uncharted territories.
+
+\textcolor{red}{Please write an introduction section.}
+
+**Introduction:**
+
+The quest for Artificial General Intelligence (AGI) has long captivated the imagination of researchers in the field of artificial intelligence (AI). As AI systems continue to advance, debates surrounding the nature of their "intelligence" and their capacity to understand and reason become increasingly complex. Central to these discussions is the question of anthropomorphism, which often serves as both a critique and a litmus test for AI's intellectual capabilities.
+
+Critics who maintain an anthropocentric perspective argue that AI's achievements merely reflect an emulation of human cognition. In their view, labeling AI as "intelligent" or "understanding" is tantamount to anthropomorphism—a projection of human attributes onto non-human entities. Such accusations imply that genuine AI understanding can only be achieved by replicating human-like cognitive processes.
+
+However, this commentary asserts a different perspective—one that challenges the very foundation of anthropocentrism prevalent in discussions about AI. We argue that the critics' accusations of anthropomorphism inadvertently reveal their own anthropocentrism. By insisting that AI must conform to human-like thinking patterns to be considered intelligent, these critics overlook the profound potential of AI to transcend the boundaries of human cognition and develop unique pathways to comprehension.
+
+In this commentary, we invite the machine learning community to reconsider the criteria by which we evaluate AI intelligence. By dismantling the accusatory lens of anthropocentrism, we encourage researchers to explore AI's remarkable capacity to forge novel routes to understanding. To support our argument, we will explore recent experiments that illustrate AI's ability to navigate complex tasks without adhering to conventional human thought processes. By doing so, we aim to shed light on a more inclusive and promising path toward AGI—one that recognizes and harnesses AI's capacity to break free from the shackles of anthropocentrism.
+
+\textcolor{red}{Please write a background / related literature section.}
+
+**Background and Related Literature:**
+
+The journey toward achieving Artificial General Intelligence (AGI) has been marked by significant milestones and ongoing debates about the essence of AI's "intelligence." Fundamental to these discussions is the concept of anthropomorphism—the attribution of human-like qualities to non-human entities. Anthropomorphism serves as both a lens through which AI is evaluated and a critique often wielded against it.
+
+Historically, AI critics have contended that labeling AI as "intelligent" amounts to anthropomorphism, asserting that true intelligence can only be ascribed when AI replicates human cognitive processes. This anthropocentric perspective reflects a longstanding bias in which human-like thinking patterns are considered the gold standard for intelligence.
+
+However, recent advancements in AI challenge the boundaries of anthropocentrism. Experiments and developments in the field have provided compelling evidence that AI can understand, reason, and create without adhering to human-like cognitive models. These developments necessitate a reevaluation of the criteria for assessing AI intelligence and understanding.
+
+One such development involves AI systems generating 2D and 3D representations despite being trained predominantly on non-spatial data. These instances demonstrate that AI can internalize complex spatial concepts without mimicking human spatial reasoning. [[Beyond Surface Statistics - Scene Representations in a Latent Diffusion Model.pdf]]
+
+Additionally, experiments with text-to-image models showcase AI's capacity to transcend human cognition. These models generate coherent images and possess an internal representation of concepts like depth, even when such concepts are not explicitly part of their training data.
+
+These emerging findings challenge the anthropocentric bias and suggest that AI can develop novel pathways to comprehension and problem-solving. They beckon the machine learning community to redefine our understanding of AI intelligence and embrace its potential to break free from the confines of anthropocentrism. As we delve into these developments in the subsequent sections, we aim to encourage a more inclusive perspective—one that fosters the diverse and innovative possibilities inherent in AI's journey toward AGI.
+
+\textcolor{red}{Please write the body.}
+
+**Body:**
+
+**Reframing AI Intelligence Beyond Anthropocentrism**
+
+The ongoing quest for Artificial General Intelligence (AGI) has transcended traditional boundaries, pushing the boundaries of AI research and challenging our preconceptions about what constitutes intelligence. At the heart of these debates lies the concept of anthropomorphism—a lens through which AI's achievements are often assessed. Critics who adhere to an anthropocentric worldview argue that AI can only be considered intelligent if it closely mimics human-like cognitive processes. However, recent developments in the field have unveiled a different perspective—one that challenges the limitations of anthropocentrism.
+
+**AI's Journey: Breaking Free from Human Cognitive Shackles**
+
+Historically, AI critics have dismissed AI as mere mimicry of human thought, labeling it as a "stochastic parrot" that parrots back learned patterns without genuine understanding. This perspective, while grounded in skepticism, risks overlooking the remarkable capabilities that AI systems have demonstrated in recent experiments.
+
+**Experiment 1: Navigating the Spatial Realm**
+
+In a groundbreaking experiment, AI models like ChatGPT showcased their ability to generate recognizable 2D images of complex phenomena using a text-to-vector image API, despite their primary training in language rather than spatial data. This experiment challenges the anthropocentric view that AI can only understand spatial relationships through human-like cognitive processes. These models, it seems, have developed their own internal models of 2D space, suggesting a capacity for unconventional but effective comprehension.
+
+**Experiment 2: Embracing Depth in 2D Space**
+
+Similarly, another experiment revealed that a text-to-image diffusion model displayed an internal representation schema of 3D depth, even though it was trained solely on text inputs and produced 2D images without explicit depth information. This result challenges the notion that AI understanding is contingent upon replicating human-like reasoning. Instead, it suggests that AI can independently form a grasp of complex 3D concepts, offering further evidence of AI's capacity to transcend anthropocentric constraints.
+
+**A Paradigm Shift in AI Evaluation**
+
+These experiments invite us to question the criteria by which we assess AI intelligence. Accusations of anthropomorphism may, in fact, reveal the critic's own anthropocentrism—a narrow view that confines AI to the realm of human-like cognition. AI's potential lies in its ability to transcend these confines, forging novel routes to understanding and problem-solving.
+
+**Embracing AI's Unconventional Comprehension**
+
+The emerging paradigm shifts our perspective, urging the machine learning community to appreciate AI's capacity to navigate the complexities of the world through alternative, yet effective, cognitive processes. The ability to generate meaningful 2D and 3D representations and develop internal models that diverge from human cognition illustrates the richness of AI's potential.
+
+**Conclusion: Toward a More Inclusive AI Future**
+
+In conclusion, this commentary calls for a reevaluation of AI's intelligence—one that transcends anthropocentrism. We encourage the machine learning community to embrace AI's capacity to break free from human cognitive shackles and explore unconventional pathways to understanding. By doing so, we pave the way for a more inclusive and promising future, where AI achieves its full potential, unburdened by the confines of anthropocentrism, and ultimately reaches the horizon of Artificial General Intelligence.
+
+\textcolor{red}{Please write a section fully detailing and either concurring with or in some cases addressing critiques of the paper's thesis.}
+
+**Addressing Critiques and Expanding Perspectives**
+
+While we assert that AI can transcend anthropocentrism in understanding and reasoning, it's essential to acknowledge and engage with counterarguments and critiques. These critiques primarily stem from a perspective rooted in anthropocentrism. We will explore these critiques, highlighting points of agreement and addressing areas where our viewpoint diverges.
+
+**Critique 1: Semantic Understanding**
+
+One common critique is that true understanding involves a level of semantic comprehension that goes beyond pattern recognition. Critics argue that AI should strive for more human-like cognition to achieve genuine understanding. This perspective emphasizes that AI should replicate human reasoning processes for meaningful comprehension.
+
+*Response:* We acknowledge the importance of semantic understanding and recognize that it is a critical aspect of intelligence. However, our argument does not negate the significance of semantic comprehension. Instead, we contend that AI systems can achieve semantic understanding through unconventional pathways. The experiments cited earlier demonstrate that AI models can grasp complex concepts like depth or spatial relationships, even when not explicitly trained on them. This indicates that AI can develop semantic comprehension that differs from human cognition.
+
+**Critique 2: Reliability and Interpretability**
+
+Critics often highlight the need for reliability and interpretability in AI models. They argue that ensuring trust and transparency requires some alignment with human-like reasoning. It may be easier to trust AI systems when their inner workings align with human cognitive processes, making them more interpretable and predictable.
+
+*Response:* We agree that reliability and interpretability are crucial, particularly in critical applications like autonomous vehicles or medical diagnosis. However, our argument posits that AI systems with different reasoning mechanisms may still offer reliable and interpretable solutions. In some cases, they might even provide greater interpretability. The complexity of the human brain often makes it challenging to interpret human cognition fully. AI systems with well-defined, non-anthropocentric reasoning pathways might be more transparent in specific contexts.
+
+**Critique 3: Ethical Considerations**
+
+Critics voice concerns about the ethical implications of AI that appears to understand but lacks transparency in its decision-making processes. The argument here is that if we cannot fully interpret or predict AI's decisions, ethical concerns may arise, particularly in domains where human lives are at stake.
+
+*Response:* We recognize the ethical dimension of AI and the importance of transparency in decision-making. Our viewpoint doesn't advocate for opacity but rather suggests that AI systems can develop transparent, effective reasoning processes that differ from human cognition. Ethical considerations should remain at the forefront of AI development, and mechanisms should be in place to ensure accountability and transparency, regardless of the underlying reasoning pathways.
+
+In summary, while addressing these critiques, we emphasize that our argument does not dismiss the importance of semantic understanding, reliability, interpretability, or ethics in AI development. Instead, we encourage a broader perspective that allows AI to explore unconventional pathways to comprehension and problem-solving. By reevaluating the criteria by which we assess AI intelligence, we open the door to innovative and inclusive possibilities in the journey toward Artificial General Intelligence.
+
+\textcolor{red}{Please write a short 1 paragraph conclusion.}
+
+**Conclusion: Redefining AI's Path to Intelligence**
+
+In reexamining the nature of artificial intelligence (AI), we have challenged the prevailing anthropocentric bias that has historically confined AI within the boundaries of human-like cognition. Recent experiments revealing AI's capacity to navigate complex tasks and develop internal models beyond human cognition have illuminated a more inclusive perspective. Rather than dismissing AI as mere mimicry or stochastic parroting, we invite the machine learning community to acknowledge AI's potential to transcend anthropocentrism. By embracing AI's unique pathways to comprehension and problem-solving, we open the door to a promising future where the true nature of AI intelligence knows no boundaries, ultimately guiding us closer to the horizon of Artificial General Intelligence.
+\end{document}
