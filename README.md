@@ -1,0 +1,1 @@
+This repo is of an abandoned research paper I began at some point. If you'd like to see the others, check out the full list [here](https://github.com/stars/evintunador/lists/research-papers). Also on that list are any currently in-progress papers
